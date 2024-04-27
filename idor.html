@@ -1,0 +1,24 @@
+<!--<form action="/idor2">
+    Enter a user id to search records:
+<input type="text" name="userid" placeholder="Enter a user id between {1-5}">
+<button type="submit" formaction="/idor2">Check</button>
+<br>-->
+<head>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<script>
+function closeMe(){
+    window.opener = self;
+    window.close();
+        }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1>This page is vulnerable to IDOR</h1><br>
+Your Profile details:<br><br>
+<center>
+Name : <%= name %><br>
+Email : <%= email %><br>
+</center>
+<br>
+<b><%= msg %></b> <br><br><br>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">

@@ -1,0 +1,14 @@
+<head><link href="styles.css" rel="stylesheet"></head>
+<script>
+function closeMe(){
+    window.opener = self;
+    window.close();
+        }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<img src="/images/error.png" />
+<p>
+As it can be seen, errors if not handled properly can leak sensitive information<br><br>
+Here is your next flag - ORG{all_errors_should_be_handled
+</p>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">

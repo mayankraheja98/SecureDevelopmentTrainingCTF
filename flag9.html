@@ -1,0 +1,18 @@
+<head><link href="styles.css" rel="stylesheet"></head>
+<script>
+    function closeMe(){
+        window.opener = self;
+        window.close();
+        }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<p>Good Job! Here is your next flag - ORG{do_not_hardcode_secrets}<br><br>
+
+Always remember - 
+<br>
+<br>1. Never hardcode secrets
+<br>2. AWS Secrets Manager should be used
+<br>3. Github repositories should be private
+</p><br>
+
+<input type="button" value="Go to Dashboard" onclick="closeMe()">

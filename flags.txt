@@ -1,0 +1,14 @@
+Flag 1 - Reach /robots.txt - ORG{robots.txt_can_leak_sensitive_endpoints} 
+Flag 2 - Reach /admin - ORG{admin_panel_should_not_be_public}
+Flag 3 - Reach /dashboard after guessing admin password - ORG{strong_credentials_should_be_used}
+Flag 4 - Export PII - ORG{1337_PII_should_be_handled_with_care}
+Flag 5 - Do HTML injection - ORG{user_input_should_be_sanitized}
+Flag 6 - Upload file - ORG{files_should_be_validated}
+Flag 7 - Server version - ORG{server_version_should_be_hidden}
+Flag 8 - Error stacks - ORG{all_errors_should_be_handled}
+Flag 9 - Github Secrets leaked - ORG{do_not_hardcode_secrets}
+Flag 10 - Outdated dependencies used - ORG{do_not_use_outdated_dependencies}
+Flag 11 - Insecure hash - ORG{secure_hash}
+Flag 12 - Malicious File download - ORG{Never_download_softwares_from_unknown_websites}
+Flag 13 - IDOR - ORG{IDOR_can_be_very_dangerous}
+Flag 14 - Directory Listing - ORG{disable_directory_listing_on_prod}

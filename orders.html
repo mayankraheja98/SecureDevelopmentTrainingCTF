@@ -1,0 +1,88 @@
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1>Welcome to Org Orders</h1>
+
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid rgb(74, 168, 8);
+          border-collapse: collapse;
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        window.onload = function Mask() {
+            const card = document.getElementById('task').innerHTML;
+            const replaced = card.replace(/[0-9]/g,"X");
+            document.getElementById('task').innerHTML = replaced;
+            //XXXX-XXXX-XXXX-XXXX
+       }
+    </script>
+</head>
+<p value=card></p>
+<body>
+    <p>The flag for this challenge will be achieved in two parts</p>
+    <p>For Part 1, find out the first 4 digits of Card number of Aman </p>
+    <p>For Part 2, Export all PII data to excel </p>
+    <p>Join the Part 1(a) and Part 2(b) to get final flag. Like - ORG{a_b}</p><br>
+    <table id="pii">
+       <tr>
+           <th>Id</th>
+           <th>Name</th>
+           <th>Email</th>
+           <th>Phone</th>
+           <th>Order Id</th>
+           <th>Card No</th>
+       </tr>
+       <tr>
+           <td>1</td>
+           <td>aman</td>
+           <td>aman@gmail.com</td>
+           <td>9913371337</td>
+           <td>ORD-987</td>
+           <td ><div id="task">1337-9987-9988-7676</div></td>
+       </tr>
+       <tr>
+           <td>2</td>
+           <td>Ashish</td>
+           <td>ashi@gmail.com</td>
+           <td>9976545322</td>
+           <td>ORD-123</td>
+           <td>3084-9987-6676-8765</td>
+       </tr>
+       <tr>
+           <td>3</td>
+           <td>Rani</td>
+           <td>raniyadav@gmail.com</td>
+           <td>8796765415</td>
+           <td>ORD-542</td>
+           <td>2882-7676-9988-3421</td>
+       </tr>
+       <tr>
+           <td> 4 </td>
+           <td> hemant </td>
+           <td> coolhemant@gmail.com </td>
+           <td> 7658907687 </td>
+           <td> ORD-765 </td>
+           <td> 8787-1235-7089-5454 </td>
+       </tr>
+   </table>
+   <br />
+   <input type="button" id="btnExport" value="Export All PII" onclick="Export()" />
+   <script type="text/javascript">
+       function Export() {
+            document.getElementById('reflect').innerHTML = "Stop!! <br> Bulk downloading of PII is strictly forbidden!! <br><br>Btw, Here is your second part of the flag - 'PII_should_be_handled_with_care'<br> ";
+       }
+       function closeMe(){
+    window.opener = self;
+    window.close();
+        }
+   </script>
+   <br><br>
+   <div id="reflect"></div><br>
+   <input type="button" value="Go to Dashboard" onclick="closeMe()">
+
+</body>

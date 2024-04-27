@@ -1,0 +1,33 @@
+<head>
+    <style>
+        .hint{
+            position: absolute; 
+            bottom:0;
+            left: 1;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<script>
+    function closeMe(){
+        window.opener = self;
+        window.close();
+        }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<p>Decrypt the below 2 hashes to get your next Flag <br><br>
+<b>Hash 1 - </b> d015cc465bdb4e51987df7fb870472d3fb9a3505 <br>
+<b>Hash 2 - </b> 0800fc577294c34e0b28ad2839435945<br><br>
+Tip - Use any online service to identify the hashing algorithm and then decrypt the hash
+</p>
+<br>
+<p> <u>To get your flag after decrypting:</u> <br>
+Join the decrypted values of above 2 hashes with an "_" and enclose the formed value between "ORG{}"<br>
+Example: After decrypting Hash 1 you get "a"<br>
+After decrypting Hash 2 you get "b"<br>
+Final flag will be - ORG{a_b}<br>
+</p><br>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">
+<div class="hint"><a href="https://hashes.com/en/tools/hash_identifier" target="_blank">Reference 1</a>
+<a href="https://md5decrypt.net/en/Sha1/" target="_blank">Reference 2</a>
+<a href="https://md5decrypt.net/en/" target="_blank">Reference 3</a></div>
