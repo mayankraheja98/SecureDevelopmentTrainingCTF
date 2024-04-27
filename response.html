@@ -1,0 +1,21 @@
+<head>
+    <style>
+        .hint{
+            position: absolute; 
+            bottom:0;
+            left: 1;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<script>
+function closeMe(){
+    window.opener = self;
+    window.close();
+    }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<p> <br>Response headers are very crucial for any application. <br><br>
+Go check the headers of this page to find your next flag!</p><br>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">
+<div class="hint"><a href="https://mkyong.com/computer-tips/how-to-view-http-headers-in-google-chrome/#:~:text=To%20view%20the%20request%20or,displayed%20on%20the%20right%20panel." target="_blank">Hint</a></div>

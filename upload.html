@@ -1,0 +1,45 @@
+<head>
+    <style>
+        .hint {
+            position: absolute; 
+            bottom:0;
+            left: 1;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1>Upload Bills here</h1>
+
+<script>
+    function fileValidation() {
+        var fileInput = document.getElementById('myfile');
+         
+        var filePath = fileInput.value;
+     
+        // Allowing file type
+        var allowedExtensions =
+                /(\.jpg|\.jpeg|\.png)$/i;
+         
+        if (!allowedExtensions.exec(filePath)) {
+            alert('Invalid file type! Wow, you tried something different!');
+            document.getElementById('reflect').innerHTML = "Good Job! One should be aware that user can upload malicious files <br> So, there should be checks in place to handle this<br><br>Btw, Here is your flag - ORG{files_should_be_validated} ";
+            return false;
+        } else{
+            alert('You are a good user! Try something out of the box now :)'); 
+            return false;
+        }
+    }
+    function closeMe(){
+    window.opener = self;
+    window.close();
+        }
+</script>
+
+Upload only <b>.jpg/.jpeg/.png</b> files:
+<br><br>
+<input type="file" id="myfile" name="myfile" onchange="return fileValidation()"/>
+<br><br>
+<div id="reflect"></div>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">
+<div class="hint">Hint - Try a dissallowed filetype</div>

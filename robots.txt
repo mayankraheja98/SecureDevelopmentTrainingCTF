@@ -1,0 +1,15 @@
+# Congrats! You did it! 
+
+# This is a robots.txt file 
+# It contains URLs that developers want Search Engines to avoid from crawling 
+# If any endpoint is added in "Disallow", Search Engines will not crawl it
+
+
+User-agent: * 
+Disallow: /admin
+
+
+# This is your first flag - ORG{robots.txt_can_leak_sensitive_endpoints} - Copy & Paste this is the google form
+
+
+# Try to use the above information to move forward!!

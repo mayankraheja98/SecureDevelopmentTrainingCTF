@@ -1,0 +1,38 @@
+<head>
+    <style>
+        .hint{
+            position: absolute; 
+            bottom:0;
+            left: 1;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1>Search anything here</h1>
+<script>
+    function search(){
+        var text = document.getElementById('search').value;
+        var chall = "<i>Org</i>";
+        document.getElementById('reflect').innerHTML = "You searched for: " + text;
+        if (text == chall){
+            document.getElementById('reflect2').innerHTML = "Congrats!! You did it! <br> Here is your flag - ORG{user_input_should_be_sanitized} ";
+        }
+    }
+    function closeMe(){
+    window.opener = self;
+    window.close();
+        }
+</script>
+<body>
+Keyword: <input type="text" name="search" id="search">
+<button onclick="search()">Search</button>
+<br><br><br>
+<div id="reflect"></div><br><br>
+<div id="reflect2"></div>
+</form>
+<br><br>
+<h4><b>Task</b> - Can you print "Org" in italics here?</h4>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">
+</body>
+<div class="hint"><a href="https://www.w3schools.com/tags/tag_i.asp#:~:text=Definition%20and%20Usage,%2C%20a%20ship%20name%2C%20etc." target="_blank">Hint</a></div>
