@@ -1,0 +1,18 @@
+<head><link href="styles.css" rel="stylesheet"></head>
+<script>
+    function closeMe(){
+        window.opener = self;
+        window.close();
+        }
+</script>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1>Directory Listing</h1>
+<p>
+An Uninformed ORG Developer/DevOps has created a directory on web server.<br>
+The directory "/public" is vulnerable to Directory Listing vulnerability.<br>
+Go to "/public" to find your next flag <br>
+Don't forget the flag format - ORG{}<br><br>
+<a href="/public" target="_blank"> Click Here</a><br><br>
+</p>
+
+<input type="button" value="Go to Dashboard" onclick="closeMe()">

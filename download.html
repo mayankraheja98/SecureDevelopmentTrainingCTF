@@ -1,0 +1,25 @@
+<head><link href="styles.css" rel="stylesheet"></head>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<h1><center>Your browser is Not Compatible.</center></h1>
+<script>alert("This page cannot be loaded due to outdated Adobe Flash. Please update Adobe Flash using the provided software to proceed.")</script>
+<script>
+    function closeMe(){
+        window.opener = self;
+        window.close();
+        }
+</script>
+<p>
+<input type="button" id="btnExport" value="Download Here - https://www.elephantdrive.com/files/updater.exe" onclick="download()" />
+</p>
+<script type="text/javascript">
+    function download() {
+         document.getElementById('reflect').innerHTML = "Stop!! <br> Never download any software from unknown websites!! <br><br>Click the button below to take an oath<br><br><button onclick=\"show()\">I WILL NEVER DOWNLOAD SOFTWARE FROM UNIDENTIFIED WEBSITES<button><div id=\"agree\"></div> ";
+    }
+    function show() {
+        document.getElementById('reflect2').innerHTML = "Here is your flag - ORG{Never_download_softwares_from_unknown_websites}"
+    }
+</script>
+<br><br>
+<div id="reflect"></div><br>
+<div id="reflect2"></div><br><br>
+<input type="button" value="Go to Dashboard" onclick="closeMe()">

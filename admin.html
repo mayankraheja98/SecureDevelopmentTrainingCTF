@@ -1,0 +1,50 @@
+<head>
+    <style>
+        .hint {
+            position: absolute; 
+            bottom:0;
+            left: 1;
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<img src="images/logo.jpg" align="right" width="90" height="50"></img>
+<p>Congrats! Here is your next flag - ORG{admin_panel_should_not_be_public}</p>
+
+<!--This login was created by an Uninformed developer--> 
+<!--He thinks he can hide credentials here and no one can see!--> 
+<center><h1> <u>Default</u> Admin Panel</h1>
+<br>
+Try to login here!!<br>
+<br>
+<script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;
+    var login_flag=document.myform.login_flag.value;  
+      
+    if (name == "admin" && password == "admin"){
+        alert("Success!! You cracked the credentials! Dashboard is now accessible! ");   
+    }else if (name==null || name==""){  
+        alert("Name can't be blank"); 
+        
+    }else if(password==null || password==""){  
+        alert("Password can't be blank."); 
+          
+    } else{
+        alert("Wrong credentials");
+    }
+    }  
+    </script>  
+    <body>  
+    <form name="myform" onsubmit="validateform()" method="post">  
+    Name: <input type="text" name="name"><br/> <br> 
+    Password: <input type="password" name="password"><br/>  <br>
+    <input type="submit" value="Login">  
+    </form>
+    <%= msg %>
+</center>
+
+<input type="button" value="Go to Home Page" onclick="window.location.replace('/')">
+
+<div class="hint">Hint - A web page runs on it source code!! *Cntrl+U*</div>
