@@ -4,7 +4,7 @@ const fs = require('fs');
 var serveIndex = require('serve-index');
 var http = require('http');
 const https = require('https');
-const port = 4000;
+const PORT = process.env.PORT || 3030;
 //const secure_port = 3000;
 
 //const options = {
@@ -25,7 +25,7 @@ app.engine('html', require('ejs').renderFile);
 var server = http.createServer(app);
 
 server.listen(port, () => {
-  console.log("Server starting on port : " + port)
+  console.log("Server started on port ${PORT}");
 });
 
 // server css as static
