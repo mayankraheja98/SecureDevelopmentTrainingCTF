@@ -1,0 +1,67 @@
+-- MySQL dump 10.13  Distrib 5.7.22, for osx10.12 (x86_64)
+-- version 4.9.2
+-- https://www.myorg.com/
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 30, 2022 at 07:17 PM
+-- Server version: 8.0.18
+-- PHP Version: 7.3.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+
+-- Database: `could_have_been_org_orders_prod`
+-- Table structure for table `contacts`
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `adr_locality` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `note` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table `contacts`
+
+INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `birth_date`, `org`, `adr_street`, `adr_postal_code`, `adr_locality`, `note`) VALUES
+(1, 'Noémi', 'Raynaud', NULL, 'Leclercq', '', '', '', ''),
+(2, 'Alfred', 'Richard', '1997-10-22', 'Marty', '', '', '', 'Here is your flag - ORG{disable_directory_listing_on_prod}.'),
+(3, 'Laurent', 'Berger', '1996-12-12', 'Couturier', '91, rue de Guillot', '79267', 'Gautier', ''),
+(4, 'Gérard', 'Pasquier', '1980-03-29', 'Berthelot', '', '', '', 'Est accusamus blanditiis accusantium autem.'),
+(5, 'Gilbert', 'Hubert', '2000-01-13', 'Pires', '', '', '', ''),
+-- --------------------------------------------------------
+--
+-- Table structure for table `phones`
+--
+
+DROP TABLE IF EXISTS `phones`;
+CREATE TABLE IF NOT EXISTS `phones` (
+  `contact_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `phones_ibfk_1` (`contact_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phones`
+--
+
+INSERT INTO `phones` (`id`, `country_code`, `number`, `type`, `contact_id`) VALUES
+(1, 33, '603619857', 'fax', 2),
+(2, 33, '275603688', 'work', 2),
+(3, 33, '879637065', 'cell', 3),
+(4, 33, '725920254', 'home', 4),
+(5, 33, '430662794', 'fax', 4),
+
+--
+-- Constraints for dumped tables
+--
+--
+-- Constraints for table `phones`
+--
+ALTER TABLE `phones`
+  ADD CONSTRAINT `phones_ibfk_1` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
