@@ -24,7 +24,7 @@ app.engine('html', require('ejs').renderFile);
 
 var server = http.createServer(app);
 
-server.listen(port, () => {
+server.listen(PORT, () => {
   console.log("Server started on port ${PORT}");
 });
 
